@@ -20,7 +20,7 @@ package demo.transaction.ebean;
  * #L%
  */
 
-import act.db.ebean2.EbeanDao;
+import act.db.ebean.EbeanDao;
 import io.ebean.annotation.Transactional;
 import org.osgl.util.E;
 
@@ -30,8 +30,9 @@ import javax.persistence.Id;
 /**
  * The account with a certain amount of money
  */
-@Entity(name = "acc")
+@Entity(name = "acc3")
 public class Account {
+
     @Id
     String id;
 

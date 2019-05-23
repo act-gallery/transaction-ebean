@@ -20,6 +20,9 @@ package demo.transaction.ebean;
  * #L%
  */
 
+import static act.controller.Controller.Util.redirect;
+import static act.controller.Controller.Util.render;
+
 import act.Act;
 import act.app.ActionContext;
 import act.job.OnAppStart;
@@ -30,9 +33,6 @@ import org.osgl.mvc.result.Result;
 import org.osgl.util.IntRange;
 
 import javax.inject.Inject;
-
-import static act.controller.Controller.Util.redirect;
-import static act.controller.Controller.Util.render;
 
 /**
  * A Simple Todo application controller
@@ -52,8 +52,10 @@ public class TransactionEbeanApp {
         return render(accA, accB);
     }
 
+    public void foo() {}
+
     @PostAction("/transfer")
-    public Result transfer(int amount, boolean btnA2B, boolean btnB2A, ActionContext context) {
+    public Result transfer(int amount, boolean btnA2B, ActionContext context) {
         boolean success;
         if (btnA2B) {
             success = dao.transfer(amount, ACC_A, ACC_B);
