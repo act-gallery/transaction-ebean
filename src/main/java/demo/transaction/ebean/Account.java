@@ -21,7 +21,7 @@ package demo.transaction.ebean;
  */
 
 import act.db.ebean.EbeanDao;
-import io.ebean.annotation.Transactional;
+import act.db.sql.tx.Transactional;
 import org.osgl.util.E;
 
 import javax.persistence.Entity;
