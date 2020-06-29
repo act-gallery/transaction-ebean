@@ -1,6 +1,10 @@
-### ACT Framework Demo Applications
+# ACT Framework Demo Applications
 
-Usage:
+## KNOWN ISSUE
+
+* At the moment act-ebean does not work on Java9+
+
+## Usage:
 
 To start in dev mode:
 
